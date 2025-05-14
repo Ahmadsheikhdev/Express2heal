@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
+    "baseUrl": "src", // Root directory for imports
     "paths": {
-      "@/*": ["./src/*"]
+      "@components/*": ["src/Components/*"]
     }
   }
 }

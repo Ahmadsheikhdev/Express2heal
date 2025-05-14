@@ -1,21 +1,131 @@
+/* @font-face rule to define Parkinsans font family */
+@font-face {
+  font-family: 'Parkinsans';
+  src: url('/fonts/Parkinsans/static/Parkinsans-Regular.ttf') format('truetype'),
+       url('/fonts/Parkinsans/static/Parkinsans-Bold.ttf') format('truetype'),
+       url('/fonts/Parkinsans/static/Parkinsans-SemiBold.ttf') format('truetype'),
+       url('/fonts/Parkinsans/static/Parkinsans-Light.ttf') format('truetype'),
+       url('/fonts/Parkinsans/static/Parkinsans-Medium.ttf') format('truetype'),
+       url('/fonts/Parkinsans/static/Parkinsans-ExtraBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Global styles */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #ffffff; /* Light background */
+  --foreground: #171717; /* Light text color */
+  --primary-color: #1a73e8; /* Primary accent (e.g., buttons) */
+  --secondary-color: #fbbc05; /* Secondary accent */
+  --hover-color: #e8f0fe; /* Hover background */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #0a0a0a; /* Dark background */
+    --foreground: #ededed; /* Dark text color */
+    --primary-color: #4caf50; /* Adjusted primary for dark mode */
+    --secondary-color: #ff7043; /* Adjusted secondary for dark mode */
+    --hover-color: #333333; /* Hover background for dark mode */
   }
 }
 
+/* Apply global styles */
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Parkinsans', Arial, Helvetica, sans-serif; /* Use custom font */
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased; /* Smoother font rendering */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ensure main content takes up available space */
+main {
+  flex: 1 0 auto;
+}
+
+/* Ensure footer stays at the bottom */
+footer {
+  flex-shrink: 0;
+  position: relative;
+  z-index: 50;
+}
+
+/* Global link styles */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+a:hover {
+  background-color: var(--hover-color);
+  color: var(--foreground);
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+/* Button styles */
+button {
+  background-color: var(--primary-color);
+  color: var(--background);
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-2px); /* Subtle lift effect */
+}
+
+button:active {
+  transform: translateY(1px); /* Button press effect */
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Utility classes for light/dark mode testing */
+.light-mode {
+  background-color: #ffffff;
+  color: #171717;
+}
+
+.dark-mode {
+  background-color: #0a0a0a;
+  color: #ededed;
+}
+
+
+.loader {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

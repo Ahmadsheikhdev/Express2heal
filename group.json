@@ -1,0 +1,53 @@
+[
+    {
+      "name": "Mental Health Support Group",
+      "members": [],
+      "capacity": 10
+    },
+    {
+      "name": "Chronic Illness Support Group",
+      "members": [],
+      "capacity": 8
+    },
+    {
+      "name": "Grief and Loss Support Group",
+      "members": [],
+      "capacity": 12
+    },
+    {
+      "name": "Anxiety Management Group",
+      "members": [],
+      "capacity": 10
+    },
+    {
+      "name": "Parenting Challenges Group",
+      "members": [],
+      "capacity": 15
+    },
+    {
+      "name": "Stress Relief Support Group",
+      "members": [],
+      "capacity": 10
+    },
+    {
+      "name": "Teen Support Group",
+      "members": [],
+      "capacity": 8
+    },
+    {
+      "name": "LGBTQ+ Support Group",
+      "members": [],
+      "capacity": 10
+    },
+    {
+      "name": "Addiction Recovery Group",
+      "members": [],
+      "capacity": 12
+    },
+    {
+      "name": "Career Stress Support Group",
+      "members": [],
+      "capacity": 10
+    }
+  ]
+  
